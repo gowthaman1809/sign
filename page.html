@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid rgb(2, 2, 2);
+  margin: 0;
+}
+label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: brown;
+    font-weight: bold;
+    
+}
+la{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(6, 138, 94);
+    
+}
+</style>
+<script>
+    function check()
+    {
+          let email=document.getElementById("email").value;
+          let em=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+          if(!em.test(email))
+          {
+            alert("Email is not valid");
+          }
+          var pass=document.getElementById("password").value;
+          var pa=/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$/;
+          if(!pa.test(pass))
+          {
+            alert("password contains one upper case letter and one lower case letter and one special character");
+          }
+    }
+</script>
+<body>
+    <div class="container">
+        <table>
+    <h3><b><la>SIGN UP</la></b></h3>
+
+    <tr>
+    <td><label >User Email:</label></td>
+    <td><input type="email" id="email"></td>
+    </tr>
+
+    <tr>
+    <td><label >Password:</label></td>
+    <td><input type="Password" id="password"></td>
+</tr>
+<tr>
+   <td><button onclick="check()">Sign up</button></td> 
+</tr>
+    </div>
+</table>
+    
+</body>
+</html>
